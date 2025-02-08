@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MT-American - Acasă</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        .navbar {
+            background-color: #1e3535;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            height: 60px;
+        }
+        
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+        
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        
+        .menu {
+            display: flex;
+        }
+        
+        .menu-toggle {
+            display: none;
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .logo img {
+            height: 100%;
+            max-height: 60px;
+            width: auto;
+        }
+        
+        .description {
+            margin: 50px auto;
+            width: 80%;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+        
+        .special-offer {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            margin: 30px auto;
+            width: 60%;
+            border-radius: 10px;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #1e3535;
+            }
+            
+            .menu a {
+                text-align: center;
+                padding: 10px;
+                border-top: 1px solid #444;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo"><img src="MT-American logo.png" alt="Logo"></a>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="menu" id="menu">
+            <a href="index.html">Acasă</a>
+            <a href="despre.html">Despre noi </a>
+            <a href="produse.html">Produse</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="description">
+        <h1>MT-American – Cele Mai Tari Snack-uri Americane la Cele Mai Bune Prețuri!</h1>
+        <p>La MT-American, aducem gustul autentic al Americii direct pe rafturile noastre! Dacă îți plac snack-urile intense și dulciurile populare din SUA, aici găsești o selecție de produse pe care nu le vei putea refuza:</p>
+        <p>🔥 <strong>Takis</strong> – Chipsuri ultra-condimentate pentru iubitorii de gusturi intense!</p>
+        <p>🥤 <strong>Prime</strong> – Băutura energizantă creată de Logan Paul și KSI, perfectă pentru hidratare și energie!</p>
+        <p>🍬 <strong>Sour Patch Kids</strong> – Jeleuri cu gust dulce-acrișor, de care nu te mai poți sătura!"</p>
+        <p>🥩 <strong>Beef Jerky</strong> – Gustarea proteică perfectă, direct din cultura americană!</p>
+    </div>
+
+    <div class="special-offer">
+        <h2>✨ Ofertă Specială ✨</h2>
+        <p> 1 <strong>Prime strawberry&banana</strong> +1 <strong>Prime UFC 300</strong> la doar <strong>55 de lei</strong>!</p>
+        <p><strong>Economisești 15% din prețul inițial!</strong></p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+            }
+        }
+    </script>
+</body>
+</html>
